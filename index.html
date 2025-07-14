@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="icon" type="image/png" href="
+invoice.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="crud">
+        <div class="head"><h2>cruds</h2>
+        <p>PROKUCT MANAGEN SYSTEM</p>
+        <div class="author"><p>Developed by Ahmed Darwish</p></div>
+    </div>
+        <div class="inputs">
+            <input  placeholder="title"  id="title" type="text" >
+            <div class="price">
+                <input  onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input  onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input  onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input  onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small   id="total">555</small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Creat</button>
+        
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="outputs">
+            
+                <input onkeyup="searchData(this.value)" type="text" name="" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="getsearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getsearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+        <div id="deleteAll">
+
+
+        </div>
+            <table   style="width: 100%; overflow-x:auto;">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                    
+                </tr>
+                <tbody id="tbody">
+                    <!-- Data will be inserted here dynamically -->
+                
+                  
+
+
+
+
+
+                </tbody>
+            </table>
+            
+            </div>
+             
+
+
+        </div>        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ✅ Social Media Icons Footer - Normal at bottom -->
+<footer class="wrapper" style="
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: #11111117;
+  border-top: 1px solid #444;
+">
+  <h3 style="color: #ccc; margin-bottom: 10px;">تابعني على السوشيال ميديا</h3>
+
+  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 10px;">
+    <!-- Icons -->
+    <a href="https://wa.me/201550225603" target="_blank" title="WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="32" height="32">
+    </a>
+    <a href="https://www.facebook.com/ahmedmohammed48/" target="_blank" title="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32">
+    </a>
+    <a href="https://github.com/AhmedShibn" target="_blank" title="GitHub">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" width="32" height="32">
+    </a>
+    <a href="https://2u.pw/IabpC" target="_blank" title="LinkedIn">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32" height="32">
+    </a>
+    <a href="https://x.com/AhmedShibn85729" target="_blank" title="X">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" width="32" height="32">
+    </a>
+  </div>
+
+  <p style="color: #888; font-size: 14px;">Developed by Ahmed Darwish</p>
+  <div id="savedComment" style="margin: 20px 0; text-align: right;"></div>
+</footer>
+
+
+<!-- commetnt -->
+<div id="commentSection" style=" width:90%;margin:0 30px;text-align:center; padding: 10px; background: #11111117; border-top: 1px solid #444;">
+  <input id="userName" type="text" style="width:40%;border-radius:8px;padding:8px;margin-bottom:8px; text-align: center;" placeholder="اسمك">
+  <br>
+  <textarea id="userComment" rows="3" style="width:80%;border-radius:8px;padding:8px;" placeholder="اكتب تعليقك هنا..."></textarea>
+  <br>
+  <button onclick="saveComment()">حفظ التعليق</button>
+</div>
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
